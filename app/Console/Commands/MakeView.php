@@ -48,12 +48,27 @@ class MakeView extends Command
         }catch(Exception $e){
             $args['sections'] = ['content'];
         }
+        
+        $formatted_name = $this->format_filename($args['view_name']);
         $file_content = MakeViewHelper::BasicViewContent('Layout', $args['sections']);
-        if(FileHelper::CreateFile($args['view_name'].'.blade.php', $file_content)){
+        if(FileHelper::CreateFile($formatted_name, $file_content)){
             echo 'Vista creada satisfactoriamente';
+            if(FileHelper::MoveFile($formatted_name, 'resources/views/generated/'.$formatted_name)){
+                echo 'COPIADO';
+                return 0;
+            }
+            echo 'IMPOSIBLE COPIAR';
             return 0;
         }
         echo 'El archivo se ha actualizado';
         return 0;
+    }
+
+    /**
+     * @param string $file_name Cadena que representa el nombre del archivo a generar. Ej: Audiencias
+     * @return string El archivo formateado. Ej: Audiencias.blade.php
+     */
+    private function format_filename(string $file_name){
+        return $file_name.'.blade.php';
     }
 }

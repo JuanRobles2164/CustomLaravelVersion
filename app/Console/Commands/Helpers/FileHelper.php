@@ -17,4 +17,7 @@ class FileHelper{
         fclose($fh);
         return true;
     }
+    public static function MoveFile($actual_location, $new_location){
+        return rename($actual_location, $new_location);
+    }
 }

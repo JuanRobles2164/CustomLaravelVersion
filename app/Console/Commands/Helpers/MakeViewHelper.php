@@ -7,10 +7,7 @@ class MakeViewHelper{
      * @param array Array que representa las secciones de las que comprenderá la vista. Ej: content,custom_scripts
      * @return string Cadena que representa el contenido del archivo a generar
      */
-    public static function BasicViewContent($parent_layout='Layout', $section = null){
-        if($section == null){
-            $section = ['content'];
-        }
+    public static function BasicViewContent($parent_layout, array $section){
         $content = "@extends('$parent_layout')\n";
         foreach($section as $name){
             $content = $content . "
