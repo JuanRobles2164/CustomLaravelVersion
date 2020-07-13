@@ -50,6 +50,7 @@ class MakeView extends Command
         }
         
         $formatted_name = $this->format_filename($args['view_name']);
+        
         $file_content = MakeViewHelper::BasicViewContent('Layout', $args['sections']);
         if(FileHelper::CreateFile($formatted_name, $file_content)){
             echo 'Vista creada satisfactoriamente';
