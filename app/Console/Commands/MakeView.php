@@ -12,16 +12,17 @@ class MakeView extends Command
     /**
      * The name and signature of the console command.
      *
-     * @var string
+     * @var string $view_name Nombre de la vista
+     * @var string $s* array con las sections
      */
-    protected $signature = 'command:MakeView {view_name}, {s*}';
+    protected $signature = 'gea:make_view {view_name}, {s*}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Crea una vista en la ruta /resources/views/generated';
 
     /**
      * Create a new command instance.

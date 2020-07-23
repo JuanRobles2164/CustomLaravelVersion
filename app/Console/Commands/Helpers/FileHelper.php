@@ -20,4 +20,13 @@ class FileHelper{
     public static function MoveFile($actual_location, $new_location){
         return rename($actual_location, $new_location);
     }
+
+    /**
+     * @param string $path Cadena que representa la ruta de la carpeta. Ej: '/App/Htpp/Controllers/Controllers_Subcarpeta'
+     * @param int $access_level Numero que representa el nivel de acceso que va(n) a tener la(s) carpeta(s). Ej: 777, 567, 755
+     * @return bool Indica si la creación fué exitosa o no.
+     */
+    public static function CreateDirectories(string $path, int $access_level = 0755){
+        return mkdir($path, $access_level);
+    }
 }
