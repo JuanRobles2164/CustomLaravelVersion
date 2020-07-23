@@ -17,3 +17,12 @@ I will be happy to hear you (or read you, of course haha).
 
 Docs are still in redaction proccess, but, meanwhile...
 Here's a link if you want to see the [docs](https://docs.google.com/document/d/15F_Ywng-sSiGzUeCGRmizyGXWOjjE5rNEqxFzfbO9kk/edit?usp=sharing)
+
+
+
+<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+
+### Perfil de GitHub de mis compañeros / GitHub profile of my partners:
+- **[MarlyAcosta](https://github.com/MarlyAcosta)**
+- **[gabocastro29](https://github.com/gabocastro29)**
+- **[miguelblancoguerrero](https://github.com/miguelblancoguerrero)**
